@@ -1,4 +1,5 @@
 import os
+import sys
 from datetime import timedelta
 from dotenv import load_dotenv
 
@@ -24,6 +25,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'Users',
+    'News',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -32,8 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
-    'Users',
-    'News',
 ]
 
 MIDDLEWARE = [
@@ -46,7 +47,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'FBracking_News.urls'
+ROOT_URLCONF = 'FBreacking_News.urls'
 
 TEMPLATES = [
     {
@@ -64,11 +65,12 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'FBracking_News.wsgi.application'
+WSGI_APPLICATION = 'FBreacking_News.wsgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
 
 DATABASES = {
     'default': {
@@ -82,6 +84,7 @@ DATABASES = {
 }
 
 
+AUTH_USER_MODEL = 'Users.User'
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 

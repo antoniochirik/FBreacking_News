@@ -1,5 +1,5 @@
 """
-WSGI config for FBracking_News project.
+WSGI config for FBreacking_News project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'FBracking_News.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'FBreacking_News.settings')
 
 application = get_wsgi_application()
